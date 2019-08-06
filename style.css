@@ -1,0 +1,29 @@
+.timecard-week {
+	padding: 10px;
+	display: grid;
+	grid-template-columns: 25% 10% 10% 10%;
+	grid-gap: 5px;
+}
+label {
+	font-size: 1.9em;
+	text-align: center;
+}
+
+input {
+	font-size: 1.9em;
+}
+
+#totalHours {
+	padding: 15px;
+	font-size: 36px;
+	text-align: center;
+	position: relative;
+	right: 20%;
+}
+
+#calcButton {
+	padding: 10px;
+	font-size: 24px;
+	position: relative;
+	left: 15%;
+}

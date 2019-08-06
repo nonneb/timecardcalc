@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Timecard Calculator</title>
+	<h1>Timecard Calculator</h1>
+	<link rel="stylesheet" type"text/css" href="style.css">
+</head>
+
+<body>
+	<form class='timecard-week'>
+
+	<label for='mondayIn'>Monday in:</label>
+	<input type='text' id='mondayIn' size="4"></input>
+	<label for='mondayOut'>out:</label>
+	<input type='text' id='mondayOut' size="4"></input>
+
+	<label for='tuesdayIn'>Tuesday in:</label>
+	<input type='text' id='tuesdayIn' size="4"></input>
+	<label for='tuesdayOut'>out:</label>
+	<input type='text' id='tuesdayOut' size="4"></input>
+
+	<label for='wednesdayIn'>Wednesday in:</label>
+	<input type='text' id='wednesdayIn' size="4"></input>
+	<label for='wednesdayOut'>out:</label>
+	<input type='text' id='wednesdayOut' size="4"></input>
+
+	<label for='thursdayIn'>Thursday in:</label>
+	<input type='text' id='thursdayIn' size="4"></input>
+	<label for='thursdayOut'>out:</label>
+	<input type='text' id='thursdayOut' size="4"></input>
+
+	<label for='fridayIn'>Friday in:</label>
+	<input type='text' id='fridayIn' size="4"></input>
+	<label for='fridayOut'>out:</label>
+	<input type='text' id='fridayOut' size="4"></input>
+	
+	<label for='saturdayIn'>Saturday in:</label>
+	<input type='text' id='saturdayIn' size="4"></input>
+	<label for='saturdayOut'>out:</label>
+	<input type='text' id='saturdayOut' size="4"></input>
+	
+	<label for='sundayIn'>Sunday in:</label>
+	<input type='text' id='sundayIn' size="4"></input>
+	<label for='sundayOut'>out:</label>
+	<input type='text' id='sundayOut' size="4"></input>
+
+	</form>
+	<button id='calcButton' onclick="calc()">Calculate hours</button>
+
+	<div id='totalHours'></div>
+
+	<script src='calc.js'></script>
+</body>
+</html>
