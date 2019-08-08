@@ -27,3 +27,11 @@ input {
 	position: relative;
 	left: 15%;
 }
+
+input.valid{
+    border-color:green;
+}
+
+input.invalid{
+    border-color: orange;
+}
