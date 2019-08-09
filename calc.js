@@ -70,8 +70,7 @@ function getDiff(timein, timeout) {
 		timeout[1]=Number(timeout[1]) + 60;;
 	}
 	if (Number(timeout[0]) < Number(timein[0])) {
-		alert(`Please make sure clock-out times are later than clock-in times`);
-		return;
+		timeout[0] = +timeout[0]+24;
 	}
 	return[(timeout[0] - timein[0]), (timeout[1] - timein [1])]
 }
