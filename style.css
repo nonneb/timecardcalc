@@ -1,16 +1,48 @@
 .timecard-week {
 	padding: 10px;
 	display: grid;
-	grid-template-columns: 25% 10% 10% 10%;
 	grid-gap: 5px;
 }
+
+@media (max-width: 699px) {
+    .timecard-week {
+    grid-template-columns: 39% 20% 15% 20%;
+    }
+}
+
+@media (min-width: 700px) {
+    .timecard-week {
+	grid-template-columns: 25% 10% 10% 10%;
+    }
+}
+
 label {
 	font-size: 1.9em;
 	text-align: center;
 }
 
+
 input {
 	font-size: 1.9em;
+}
+
+
+@media (max-width: 500px) {
+    label {
+        font-size: 1.3em;
+    }
+    input {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 400px) {
+    label {
+        font-size:1em;
+    }
+    input {
+        font-size:1em;
+    }
 }
 
 #totalHours {
