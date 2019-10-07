@@ -4,13 +4,13 @@
 	grid-gap: 5px;
 }
 
-@media (max-width: 699px) {
+@media (max-width: 760px) {
     .timecard-week {
     grid-template-columns: 39% 20% 15% 20%;
     }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 761px) {
     .timecard-week {
 	grid-template-columns: 25% 10% 10% 10%;
     }
@@ -58,6 +58,13 @@ input {
 	font-size: 24px;
 	position: relative;
 	left: 15%;
+}
+
+#clearButton {
+	padding: 10px;
+	font-size: 24px;
+	position: relative;
+	left: 20%;
 }
 
 input.valid{
