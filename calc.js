@@ -1,5 +1,6 @@
 const inputs = document.querySelectorAll("input");
 const timePattern = /^$|^[0-2][0-9][0-5][0-9]$/
+var allInputs = document.getElementsByTagName('input');
 
 function validate(field) {
     if (timePattern.test(field.value)) {
@@ -15,6 +16,15 @@ inputs.forEach((input) => {
     });
 });
 
+function clearInputs() {
+  var allInputs = document.getElementsByTagName("input");
+  for (var ii = 0; ii < allInputs.length; ii++) {
+    if (allInputs[ii].type == 'text') {
+      allInputs[ii].value = "";
+    }
+	document.getElementById("totalHours").innerHTML = "";
+ }
+}
 
 function calc() {
 	var mondayClockIn = getHrMin(document.getElementById("mondayIn").value);
@@ -39,7 +49,7 @@ function calc() {
 	var fridayTime = getDiff(fridayClockIn, fridayClockOut);
 	var saturdayTime = getDiff(saturdayClockIn, saturdayClockOut);
 	var sundayTime = getDiff(sundayClockIn, sundayClockOut);
-	
+
 
 	var totalMinutes = +mondayTime[1] + +tuesdayTime[1] + +wednesdayTime[1] + +thursdayTime[1] + +fridayTime[1] + +saturdayTime[1] + sundayTime[1];
 
@@ -50,7 +60,7 @@ function calc() {
 		totalHours = totalHours + (totalMinutes - (totalMinutes % 60))/60;
 		totalMinutes = totalMinutes % 60;
 	}
-	//alert(totalHours + ':' + totalMinutes);			
+	//alert(totalHours + ':' + totalMinutes);
 	document.getElementById("totalHours").innerHTML = totalHours + 'hrs ' + totalMinutes + 'mins' + '<br>' + (Number(totalHours) + Number((totalMinutes/60).toFixed(2)));
 
 }
