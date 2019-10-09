@@ -8,11 +8,21 @@ function validate(field) {
     } else {
         field.className = 'invalid';
     }
+    if (field.value == "") {
+      field.classList.remove('valid');
+      field.classList.remove('invalid');
+    }
 }
 
 inputs.forEach((input) => {
     input.addEventListener('keyup', (e) => {
         validate(e.target)
+        if (e.keyCode === 13) {
+          calc();
+        };
+        if (e.keyCode === 46) {
+          clearInputs();
+        };
     });
 });
 
@@ -21,6 +31,8 @@ function clearInputs() {
   for (var ii = 0; ii < allInputs.length; ii++) {
     if (allInputs[ii].type == 'text') {
       allInputs[ii].value = "";
+      allInputs[ii].classList.remove('valid');
+      allInputs[ii].classList.remove('invalid');
     }
 	document.getElementById("totalHours").innerHTML = "";
  }
